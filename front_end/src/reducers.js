@@ -2,7 +2,7 @@ import {combineReducers} from "redux";
 
 import {SERVER_FETCH, SERVER_SUCCESS, SERVER_FAIL} from "./actions";
 
-const initialState = {
+export const initialState = {
   isFetching: false,
   books:[],
   error: false

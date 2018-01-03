@@ -30,7 +30,11 @@ const mapDispatchToProps = (dispatch) => {
         })
         .then((body) => {
           console.log(body)
-          dispatch(serverSuccess(body));
+          if(type === "authors"){
+          dispatch(serverSuccess({books: body.GoodreadsResponse.author[0].books[0].book} ));
+          } else {
+            dispatch(serverSuccess({books: body.GoodreadsResponse.book}))
+          }
         })
         .catch((err) => {
           dispatch(serverFail(err));
