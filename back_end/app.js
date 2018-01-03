@@ -1,3 +1,11 @@
+// ---------------------------------------------------------
+// Isomporphic fetch and es6-promise
+// 2018-01-03 14:11
+// ---------------------------------------------------------
+
+require('es6-promise').polyfill()
+require('isomorphic-fetch')
+
 const express = require('express');
 const app = express();
 

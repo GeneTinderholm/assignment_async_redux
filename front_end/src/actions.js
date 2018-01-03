@@ -14,9 +14,10 @@ export function serverSuccess(data) {
     data
   };
 }
-export function serverFail() {
+export function serverFail(error) {
   return {
-    type: SERVER_SUCCESS,
+    type: SERVER_FAIL,
+    error
   };
 }
 

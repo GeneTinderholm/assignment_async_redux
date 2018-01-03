@@ -29,7 +29,7 @@ export function appReducer(state = initialState, action) {
         ...state,
         isFetching: false,
         books: [],
-        error: true
+        error: action.error
       }
 
     default:
